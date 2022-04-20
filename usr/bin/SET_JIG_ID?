@@ -1,1 +1,2 @@
-
+echo "$@"> /root/JigID
+echo "ACK"
