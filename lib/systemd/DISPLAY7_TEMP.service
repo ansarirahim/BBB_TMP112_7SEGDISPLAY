@@ -1,1 +1,10 @@
+[Unit]
+After=rtcpindriver.service
+Description=Display7Segment Temp
+After=syslog.target network.target
+[Service]
+Type=simple
+ExecStart=/usr/bin/DISPLAY7_TEMP
+[Install]
+WantedBy=multi-user.target
 
