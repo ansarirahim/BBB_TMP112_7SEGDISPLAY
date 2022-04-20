@@ -1,0 +1,3 @@
+gcc -o /root/Tmp112/tmp112 /root/Tmp112/tmp112.c
+#g++ -o /root/Tmp112/tmp112_rev1 /root/Tmp112/tmp112_rev1.c
+g++ -o /root/Tmp112/tmp112_display /root/Tmp112/tmp112_display.c
