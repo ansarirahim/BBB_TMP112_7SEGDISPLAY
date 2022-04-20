@@ -1,3 +1,4 @@
 systemctl daemon-reload
 systemctl restart DISPLAY7_TEMP.service
 #systemctl enable DISPLAY7_TEMP.service
+echo "ACK"
