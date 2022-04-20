@@ -6,6 +6,8 @@ cp usr/bin/GET_TEMP_CALIB_DATA /usr/bin/
 cp usr/bin/SET_TEMP_CALIB_DATA /usr/bin/
 cp usr/bin/rtcpindriver.sh /usr/bin
 cp usr/bin/REFRESH_7SEG_DISPLAY /usr/bin/
+cp usr/bin/SET_JIG_ID\? /usr/bin/
+cp usr/bin/GET_JIG_ID\? /usr/bin/
 cp etc/environment /etc/
 cp etc/issue.net /etc/
 
@@ -19,6 +21,8 @@ chmod u+x /usr/bin/SET_TEMP_CALIB_DATA
 chmod u+x /usr/bin/GET_TEMP_CALIB_DATA
 chmod u+x /usr/bin/rtcpindriver.sh
 chmod u+x /usr/bin/REFRESH_7SEG_DISPLAY
+chmod u+x /usr/bin/GET_JIG_ID\?
+chmod u+x /usr/bin/SET_JIG_ID\
 
 cp lib/systemd/DISPLAY7_TEMP.service /lib/systemd/DISPLAY7_TEMP.service
 #cd /etc/systemd/system/
