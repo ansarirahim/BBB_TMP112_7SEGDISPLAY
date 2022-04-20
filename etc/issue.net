@@ -1,0 +1,22 @@
+Debian GNU/Linux 7
+
+BeagleBoard.org BeagleBone Debian Image 2014-05-14
+
+Support/FAQ: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+// AUTHOR:              A. R. Ansari
+//E-mail:               ansarirahim1@gmail.com
+//Contact:              +919024304883/+919462225303
+// VERSION HISTORY: VER 1.0.0 26th OCT 2017
+// VER 1.0.1 Dated 19th April 2022
+// Calibration offset command support is provided
+// Command to set calibration : SET_TEMP_CALIB_DATA<SPACE><OFFSET VALUE>
+// Command to read calibration: SET_TEMP_CALIB_DATA
+// edit: nano -c tmp112_display.c
+// build:  gcc tmp112_display.c -o tmp112_display
+// run: ./tmp112_display 1000 (1000 is referesh delay)
+// run with bash:
+// rtcpindriver==>source /etc/environment
+// bash for service: DISPLAY7_TEMP
+// service: DISPLAY7_TEMP.service
+// GET_VER Command is implented to get
