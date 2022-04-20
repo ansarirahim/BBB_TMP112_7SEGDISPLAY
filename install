@@ -1,0 +1,19 @@
+cp usr/bin/DISPLAY7_TEMP /usr/bin/
+cp usr/bin/GET_TEMP /usr/bin/
+cp usr/bin/GET_VER /usr/bin/
+cp usr/bin/SET_VER /usr/bin/
+cp usr/bin/GET_TEMP_CALIB_DATA /usr/bin/
+cp usr/bin/SET_TEMP_CALIB_DATA /usr/bin/
+cp usr/bin/rtcpindriver.sh /usr/bin
+cp etc/environment /etc/
+cp etc/issue.net /etc/
+
+
+
+chmod u+x /usr/bin/DISPLAY7_TEMP
+chmod u+x /usr/bin/GET_TEMP
+chmod u+x /usr/bin/GET_VER
+chmod u+x /usr/bin/SET_VER
+chmod u+x /usr/bin/SET_TEMP_CALIB_DATA
+chmod u+x /usr/bin/GET_TEMP_CALIB_DATA
+chmod u+x /usr/bin/rtcpindriver.sh
