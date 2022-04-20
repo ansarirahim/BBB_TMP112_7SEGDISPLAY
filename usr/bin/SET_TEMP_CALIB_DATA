@@ -1,4 +1,15 @@
+
 #!/bin/bash
+
+#Author: A. R. Ansari
+#E-mail: ansarirahim1@gmail.com
+#Mobile: +919024304883,+919462225303
+#Created: 20th April 2022
+#Last Modified: 20th April 2022
+#Description:
+#       Saves calibration data
+#Usage: SET_TEMP_CALIB_DATA<SPACE><FLOAT OR INTEGER VALUE ONLY>
+#       SET_TEMP_CALIB_DATA -0.07
 operation=false;
 if [[ $1 =~ ^[+-]?[0-9]+$ ]]; then
 #echo "Input is an integer."
@@ -21,3 +32,4 @@ if [[ "$operation" == true ]]; then
 else
         echo "NACK"
 fi
+
