@@ -1,6 +1,6 @@
 // AUTHOR:              A. R. Ansari
-//E-mail:               ansarirahim1@gmail.com
-//Contact:              +919024304883/+919462225303
+// E-mail:               ansarirahim1@gmail.com
+// Contact:              +919024304883/+919462225303
 // VERSION HISTORY: VER 1.0.0 26th OCT 2017
 // VER 1.0.1 Dated 19th April 2022
 // Calibration offset command support is provided
@@ -29,17 +29,22 @@ char buf[MYBUFSIZE]; // Output of the command
 char buf2[39];       // 35+];
 char chardisplayvalue[10];
 char TempBuffer[4];
-int main(int argc, char **argv)
+float updateCalibOffset()
 {
+        int c;
         FILE *ptr;
-	int c;
-
         if ((ptr = popen(COMMAND_GET_TEMP_CALIB_DATA, "r")) != NULL)
                 while (fread(buf, sizeof(buf), 1, ptr))
                         while ((c = getchar()) != EOF)
                                 (void)pclose(ptr);
-        float calibdata = atof(buf); //
-                                     // Create I2C bus
+        return (atof(buf)); //
+}
+int main(int argc, char **argv)
+{
+        FILE *ptr;
+        int c;
+
+        // Create I2C bus
         float cTemp = 0;
         int displayederror = 0;
         int delay_ms = atoi(argv[1]);
@@ -102,8 +107,10 @@ int main(int argc, char **argv)
                                                 }
                                                 cTemp = temp * 0.0625;
                                                 float fTemp = (cTemp * 1.8) + 32;
-                                                cTemp = cTemp + calibdata;
-                                                // Output data to screen
+                                                cTemp += updateCalibOffset();
+
+                                                // calibdata;
+                                                //  Output data to screen
                                                 printf("TEMP=%.4f\r\n", cTemp);
                                                 displayederror = 0;
                                         }
@@ -143,7 +150,7 @@ int main(int argc, char **argv)
                                                         TempBuffer[i] = chardisplayvalue[i];
                                                 memset(buf2, sizeof(buf2), '\0');
                                                 printf("\nDisplay=%s", TempBuffer);
-                                                sprintf(buf2, "%s%s",COMMAND_DISPLAY7SEGSTRING,TempBuffer); //
+                                                sprintf(buf2, "%s%s", COMMAND_DISPLAY7SEGSTRING, TempBuffer); //
 
                                                 system("Display7Brightness");
                                                 system("Display7Home0");
@@ -171,4 +178,3 @@ int main(int argc, char **argv)
                 }
         }
 }
-
