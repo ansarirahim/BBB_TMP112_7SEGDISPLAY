@@ -17,7 +17,9 @@ chmod u+x /usr/bin/SET_VER
 chmod u+x /usr/bin/SET_TEMP_CALIB_DATA
 chmod u+x /usr/bin/GET_TEMP_CALIB_DATA
 chmod u+x /usr/bin/rtcpindriver.sh
-cd /etc/systemd/system/
+
+cp lib/systemd/DISPLAY7_TEMP.service /lib/systemd/DISPLAY7_TEMP.service
+#cd /etc/systemd/system/
 ln /lib/systemd/DISPLAY7_TEMP.service /etc/systemd/system/DISPLAY7_TEMP.service
 systemctl daemon-reload
 systemctl start DISPLAY7_TEMP.service
