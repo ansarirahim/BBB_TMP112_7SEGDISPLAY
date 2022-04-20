@@ -1,1 +1,23 @@
-echo $1 > $TEMP_CALIBRATION
+#!/bin/bash
+operation=false;
+if [[ $1 =~ ^[+-]?[0-9]+$ ]]; then
+#echo "Input is an integer."
+operation=true;
+
+elif [[ $1 =~ ^[+-]?[0-9]+\.$ ]]; then
+#echo "Input is a string."
+operation=false;
+elif [[ $1 =~ ^[+-]?[0-9]+\.?[0-9]*$ ]]; then
+#echo "Input is a float."
+operation=true;
+else
+#echo "Input is a string."
+operation=false;
+fi
+
+if [[ "$operation" == true ]]; then
+        echo $1 > $TEMP_CALIBRATION
+        echo "ACK"
+else
+        echo "NACK"
+fi
