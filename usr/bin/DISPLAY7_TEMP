@@ -1,0 +1,7 @@
+#!/bin/bash
+#/root/Tmp112/tmp112_rev1 100
+source /etc/environment
+sleep  4
+#sudo /root/Tmp112/tmp112_display 1000
+/root/Tmp112/tmp112_display 1000
+#/root/Tmp112/tmp112_rev1 100
