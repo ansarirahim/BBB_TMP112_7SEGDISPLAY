@@ -5,6 +5,7 @@ cp usr/bin/SET_VER /usr/bin/
 cp usr/bin/GET_TEMP_CALIB_DATA /usr/bin/
 cp usr/bin/SET_TEMP_CALIB_DATA /usr/bin/
 cp usr/bin/rtcpindriver.sh /usr/bin
+cp usr/bin/REFRESH_7SEG_DISPLAY /usr/bin/
 cp etc/environment /etc/
 cp etc/issue.net /etc/
 
