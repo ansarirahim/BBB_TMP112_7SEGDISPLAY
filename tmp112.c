@@ -7,8 +7,8 @@
 // Command to set calibration : SET_TEMP_CALIB_DATA<SPACE><OFFSET VALUE>
 // Command to read calibration: SET_TEMP_CALIB_DATA
 // edit: nano -c tmp112_display.c
-// build:  gcc tmp112_display.c -o tmp112_display
-// run: ./tmp112_display 1000 (1000 is referesh delay)
+// build:  gcc tmp112.c -o tmp112_display
+// run: ./tmp112
 // run with bash: GET_TEMP
 // rtcpindriver==>source /etc/environment
 // GET_VER Command is implented to get version and date of revision
